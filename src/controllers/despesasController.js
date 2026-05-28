@@ -8,7 +8,7 @@ const listarDespesas = (req, res) => {
     [mes_id],
     (err, results) => {
       if (err) return res.status(500).json({ erro: err.message });
-      res.json(results);
+      res.json({ despesas: results });
     }
   );
 };
